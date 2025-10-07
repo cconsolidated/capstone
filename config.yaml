@@ -1,0 +1,50 @@
+# LIDAR-Sonar Data Fusion Configuration
+
+# Data paths
+data:
+  input_directory: "Data for OARS - Copy"
+  lidar_directory: "HYPACK iLIDAR DATA"
+  sonar_directory: "WBMS"
+  output_directory: "processed_data"
+
+# Fusion parameters
+fusion:
+  spatial_tolerance: 2.0      # meters - maximum distance for spatial matching
+  temporal_tolerance: 30.0    # seconds - maximum time difference for temporal matching
+  grid_resolution: 1.0        # meters - resolution for gridded output
+  min_confidence: 0.3         # minimum confidence threshold for valid points
+
+# LIDAR settings
+lidar:
+  device_types:
+    - "Velodyne VLP-16"
+    - "Velodyne VLP-32"
+  max_range: 100.0            # meters
+  min_intensity: 10           # minimum return intensity
+  
+# Sonar settings  
+sonar:
+  max_depth: 50.0             # meters
+  min_beam_quality: 0.5       # minimum beam quality factor
+  beam_angle_range: [-60, 60] # degrees from nadir
+
+# Water detection
+water_detection:
+  surface_smoothing: 0.5      # smoothing factor for surface detection
+  depth_change_threshold: 0.1 # minimum depth change to detect (meters)
+  outlier_std_dev: 2.0        # standard deviations for outlier removal
+
+# Visualization
+visualization:
+  colormap: "viridis"
+  figure_size: [15, 10]
+  dpi: 300
+  alpha: 0.6
+
+# Output formats
+output:
+  csv: true
+  las: false                  # LAS point cloud format
+  geotiff: false             # GeoTIFF raster format
+  shapefile: false           # ESRI Shapefile
+
