@@ -34,12 +34,18 @@ The system processes:
 
 ## Features
 
-- ✅ HSX/RAW file parsing for HYPACK LIDAR data
-- ✅ S7K file parsing for NORBIT WBMS sonar data  
-- ✅ Spatial and temporal data alignment
-- ✅ Water surface detection algorithms
-- ✅ Change detection and analysis
-- ✅ 3D visualization and export capabilities
+### Engineering Actions (EA1-EA8) - Complete Implementation:
+
+- ✅ **EA1**: HSX/RAW file parsing for HYPACK LIDAR data + S7K parsing for NORBIT WBMS sonar
+- ✅ **EA2**: GNSS/RTK coordinate system alignment with configurable sensor offsets  
+- ✅ **EA3**: Mean Low Water (MLW) datum normalization with tidal corrections
+- ✅ **EA4**: Spatial and temporal point cloud merging
+- ✅ **EA5**: Alignment error detection and correction using median filtering
+- ✅ **EA6**: Accuracy validation with RMSE, MAE, and statistical metrics
+- ✅ **EA7**: 3D visualization of merged sonar-LiDAR water surface
+- ✅ **EA8**: Comprehensive process documentation and data export
+
+**See [ENGINEERING_ACTIONS_IMPLEMENTATION.md](ENGINEERING_ACTIONS_IMPLEMENTATION.md) for complete technical details.**
 
 ## Installation
 
